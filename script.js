@@ -29,6 +29,27 @@ $(document).ready(function () {
  // we get the windspeed value from the data and set it to a value 
   var windSpeed = response.wind.speed;
   console.log("windspeed: " + windSpeed);
+  
+
+  // now we populate the main forecast El with these values 
+  var mainWeatherDiv = $("<div>");
+  mainForecastEl.append(mainWeatherDiv);
+  // create the main city title for the element
+  var todayCity = $("<h3>");
+  todayCity.text(searchInputEl.val());
+  mainWeatherDiv.append(todayCity);
+  // today's temperature 
+  var todayTemp = $("<h5>");
+  todayTemp.text("Temperature: " + newTemp + "F");
+  mainWeatherDiv.append(todayTemp);
+  // today's humidity 
+  var todayHumidity = $("<h5>");
+  todayHumidity.text("Humidity: " + humidity + "%");
+  mainWeatherDiv.append(todayHumidity);
+  // today's wind speed
+  var todayWind = $("<h5>");
+  todayWind.text("Wind Speed: " + windSpeed + "MPH");
+  mainWeatherDiv.append(todayWind);
 
 });
  });
