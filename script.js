@@ -12,7 +12,7 @@ $(document).ready(function () {
 
  // on click, we want to dynamically populate the main forecast and five day forecast 
  searchBtn.on("click", function(){
- var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInputEl.val() + "&appid=cc00bc76b8b458cb3c1c74e38a95cf97"
+ var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInputEl.val() + "&appid=cc00bc76b8b458cb3c1c74e38a95cf97";
 
  $.ajax({
   url: queryURL,
@@ -52,6 +52,17 @@ $(document).ready(function () {
   mainWeatherDiv.append(todayWind);
 
 });
+// bring in the new api link for the 5 day forecast 
+var query5URL = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchInputEl.val() + "&appid=cc00bc76b8b458cb3c1c74e38a95cf97";
+
+$.ajax({
+ url: query5URL,
+ method: "GET",
+}).then(function (result) {
+console.log(result);
+})
+
+
  });
  
   for (var i = 0; i < 5; i++) {
