@@ -8,8 +8,13 @@ $(document).ready(function () {
   var subForecastEl = $("#five-day-forecast");
   var singleTruth = [];
 
+
+ 
   // on click, we want to dynamically populate the main forecast and five day forecast
   searchBtn.on("click", function () {
+    // clear out the weather divs before populating the next city 
+    $("#main-forecast").empty();
+    $("#five-day-forecast").empty();
     // save user input to localStorage and populate new button of previous searches
     singleTruth.push(searchInputEl.val());
     localStorage.setItem("city", JSON.stringify(singleTruth));
@@ -32,6 +37,7 @@ $(document).ready(function () {
       url: queryURL,
       method: "GET",
     }).then(function (response) {
+      // $("#weather-information").empty();
       // console.log(response.main.temp);
       // get the Kelvin temperature from the api and set it to Fahrenheit
       var kelvinTemp = response.main.temp;
@@ -127,12 +133,9 @@ $(document).ready(function () {
         var subHumidityEl = $("<h6>");
         subHumidityEl.text("Humidity: " + subHumidity + "%");
         emptyEl.append(subHumidityEl);
-      
+        
     }
     });
   });
 
-  // function clearFunction() {
-  //   if()
-  // }
 });
