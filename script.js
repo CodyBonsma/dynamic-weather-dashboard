@@ -107,6 +107,7 @@ $(document).ready(function () {
         //dynamically create the 5 day forecast div and include the new values
         var emptyEl = $("<div>");
         emptyEl.addClass("forecast-box");
+        emptyEl.attr("id", "empty-div");
         subForecastEl.append(emptyEl);
         // dynamically create a title that has next day's date
         var nextDay = $("<h5>");
@@ -126,11 +127,12 @@ $(document).ready(function () {
         var subHumidityEl = $("<h6>");
         subHumidityEl.text("Humidity: " + subHumidity + "%");
         emptyEl.append(subHumidityEl);
-      }
+      
+    }
     });
   });
 
   // function clearFunction() {
-  //   $("#weather-information").empty();
+  //   if()
   // }
 });

@@ -1,6 +1,6 @@
 .test{
     padding: 20px;
-    border: dotted black;
+    /* border: dotted black; */
 }
 
 .forecast-box{
@@ -14,4 +14,18 @@
 .city-style{
     background: lightsalmon;
     border-top-right-radius: 25px;
+}
+
+#search-container{
+    /* margin: 20px; */
+    margin-left: 20px;
+    float: left;
+}
+
+#header{
+    align-content: center;
+    color: lightsalmon;
+    font-style: oblique;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }

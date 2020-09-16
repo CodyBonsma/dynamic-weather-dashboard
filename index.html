@@ -16,10 +16,14 @@
     />
   </head>
   <body>
-    <nav>Weather dashboard</nav>
-    <main>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h3 id="header">City Weather Forecast</h3>
+      </nav>
+    </div>
+    <main attribute="empty">
         <div class="row">
-            <div class="col-md-2 test">
+            <div class="col-md-2 test" id="search-container">
                 <h3>Search City</h3>
                 <input id="search-input" type="text">
                 <br>
@@ -29,7 +33,7 @@
                 </ul>
             </div>
 
-            <div class="col-sm-10" id="weather-information">
+            <div class="col-sm-9" id="weather-information">
                 <div class="row test" id="main-forecast">
 
                 </div>
