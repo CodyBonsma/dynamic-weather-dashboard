@@ -2,3 +2,11 @@
     padding: 20px;
     border: dotted black;
 }
+
+.forecast-box{
+    padding: 20px;
+    margin: 10px;
+    border-left-style: solid; 
+    border-top-right-radius: 25px;
+    background: lightskyblue;
+}
